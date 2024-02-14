@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -24,6 +25,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
+					<SpeedInsights />
 					<Header />
 					<main className="flex min-h-screen flex-col items-center p-24 justify-start">
 						{children}
